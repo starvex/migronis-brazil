@@ -1,8 +1,6 @@
 import { getProperties, getSettings, Property, Settings } from "@/lib/api";
 import PropertiesGrid from "@/components/PropertiesGrid";
 
-const basePath = process.env.NODE_ENV === 'production' ? '/migronis-brazil' : '';
-
 export default async function Home() {
   let properties: Property[] = [];
   let settings: Settings = {};
@@ -70,7 +68,7 @@ export default async function Home() {
           <h2 className="text-3xl font-bold text-white mb-2">Объекты недвижимости</h2>
           <p className="text-neutral-400 mb-8">Актуальные предложения от Migronis</p>
           
-          <PropertiesGrid initialProperties={properties} basePath={basePath} />
+          <PropertiesGrid initialProperties={properties} />
         </div>
       </section>
 

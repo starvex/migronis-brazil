@@ -4,25 +4,24 @@ import Link from 'next/link';
 
 interface HeaderProps {
   siteName?: string;
-  basePath?: string;
 }
 
-export default function Header({ siteName = 'Migronis Brazil', basePath = '' }: HeaderProps) {
+export default function Header({ siteName = 'Migronis Brazil' }: HeaderProps) {
   return (
     <header className="border-b border-neutral-800 bg-black/50 backdrop-blur-lg sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
-        <Link href={`${basePath}/`} className="flex items-center gap-2">
+        <Link href="/" className="flex items-center gap-2">
           <span className="text-xl font-bold text-white">{siteName}</span>
         </Link>
         
         <nav className="hidden md:flex items-center gap-6">
-          <Link href={`${basePath}/`} className="text-neutral-400 hover:text-white transition-colors">
+          <Link href="/" className="text-neutral-400 hover:text-white transition-colors">
             Главная
           </Link>
-          <Link href={`${basePath}/#properties`} className="text-neutral-400 hover:text-white transition-colors">
+          <Link href="/#properties" className="text-neutral-400 hover:text-white transition-colors">
             Объекты
           </Link>
-          <Link href={`${basePath}/#contact`} className="text-neutral-400 hover:text-white transition-colors">
+          <Link href="/#contact" className="text-neutral-400 hover:text-white transition-colors">
             Контакты
           </Link>
         </nav>

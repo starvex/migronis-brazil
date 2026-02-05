@@ -14,10 +14,9 @@ const filters = [
 
 interface PropertiesGridProps {
   initialProperties: Property[];
-  basePath?: string;
 }
 
-export default function PropertiesGrid({ initialProperties, basePath = '' }: PropertiesGridProps) {
+export default function PropertiesGrid({ initialProperties }: PropertiesGridProps) {
   const [activeFilter, setActiveFilter] = useState('');
   const [properties, setProperties] = useState<Property[]>(initialProperties);
   const [loading, setLoading] = useState(false);
@@ -64,7 +63,7 @@ export default function PropertiesGrid({ initialProperties, basePath = '' }: Pro
       ) : activeProperties.length > 0 ? (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {activeProperties.map((property) => (
-            <PropertyCard key={property.id} property={property} basePath={basePath} />
+            <PropertyCard key={property.id} property={property} />
           ))}
         </div>
       ) : (

@@ -20,8 +20,6 @@ export const metadata: Metadata = {
   description: "Премиальная недвижимость в Бразилии. Дома, квартиры и участки в Santa Catarina.",
 };
 
-const basePath = process.env.NODE_ENV === 'production' ? '/migronis-brazil' : '';
-
 export default async function RootLayout({
   children,
 }: Readonly<{
@@ -65,7 +63,7 @@ export default async function RootLayout({
           </noscript>
         )}
         
-        <Header siteName={settings?.site_name} basePath={basePath} />
+        <Header siteName={settings?.site_name} />
         <main className="flex-1">
           {children}
         </main>

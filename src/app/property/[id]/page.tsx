@@ -1,8 +1,6 @@
 import { getProperty, getProperties, getSettings, Property } from "@/lib/api";
 import PropertyDetails from "./PropertyDetails";
 
-const basePath = process.env.NODE_ENV === 'production' ? '/migronis-brazil' : '';
-
 interface Props {
   params: Promise<{ id: string }>;
 }
@@ -55,7 +53,7 @@ export default async function PropertyPage({ params }: Props) {
       <div className="min-h-screen flex items-center justify-center">
         <div className="text-center">
           <h1 className="text-2xl font-bold text-white mb-4">Объект не найден</h1>
-          <a href={`${basePath}/`} className="btn-primary inline-block">
+          <a href="/" className="btn-primary inline-block">
             Вернуться на главную
           </a>
         </div>
@@ -63,5 +61,5 @@ export default async function PropertyPage({ params }: Props) {
     );
   }
 
-  return <PropertyDetails property={property} settings={settings} basePath={basePath} />;
+  return <PropertyDetails property={property} settings={settings} />;
 }

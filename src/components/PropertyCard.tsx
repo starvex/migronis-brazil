@@ -5,7 +5,6 @@ import { Property } from '@/lib/api';
 
 interface PropertyCardProps {
   property: Property;
-  basePath?: string;
 }
 
 const typeLabels: Record<string, string> = {
@@ -21,7 +20,7 @@ const statusLabels: Record<string, { label: string; color: string }> = {
   reserved: { label: 'Резерв', color: 'bg-yellow-500' }
 };
 
-export default function PropertyCard({ property, basePath = '' }: PropertyCardProps) {
+export default function PropertyCard({ property }: PropertyCardProps) {
   const price = parseFloat(property.price);
   const formattedPrice = new Intl.NumberFormat('en-US', {
     style: 'currency',
@@ -33,7 +32,7 @@ export default function PropertyCard({ property, basePath = '' }: PropertyCardPr
   const status = statusLabels[property.status] || statusLabels.active;
 
   return (
-    <Link href={`${basePath}/property/${property.id}`} className="block">
+    <Link href={`/property/${property.id}`} className="block">
       <div className="card overflow-hidden cursor-pointer group">
         {/* Image */}
         <div className="relative h-48 bg-neutral-800 overflow-hidden">

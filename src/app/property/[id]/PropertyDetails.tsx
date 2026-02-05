@@ -7,7 +7,6 @@ import { Property, Settings } from '@/lib/api';
 interface Props {
   property: Property;
   settings?: Settings;
-  basePath?: string;
 }
 
 const typeLabels: Record<string, string> = {
@@ -23,7 +22,7 @@ const statusLabels: Record<string, { label: string; color: string }> = {
   reserved: { label: 'Резерв', color: 'bg-yellow-500' }
 };
 
-export default function PropertyDetails({ property, settings, basePath = '' }: Props) {
+export default function PropertyDetails({ property, settings }: Props) {
   const [activeImage, setActiveImage] = useState(0);
   
   const price = parseFloat(property.price);
@@ -44,7 +43,7 @@ export default function PropertyDetails({ property, settings, basePath = '' }: P
         {/* Breadcrumb */}
         <nav className="mb-6">
           <Link 
-            href={`${basePath}/`} 
+            href="/" 
             className="text-neutral-400 hover:text-white transition-colors inline-flex items-center gap-2"
           >
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
