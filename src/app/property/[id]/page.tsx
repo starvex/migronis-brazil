@@ -27,7 +27,7 @@ export async function generateMetadata({ params }: Props) {
     };
   } catch {
     return {
-      title: "Объект недвижимости | Migronis Brazil",
+      title: "Property | Migronis Brazil",
     };
   }
 }
@@ -52,9 +52,9 @@ export default async function PropertyPage({ params }: Props) {
     return (
       <div className="min-h-screen flex items-center justify-center">
         <div className="text-center">
-          <h1 className="text-2xl font-bold text-white mb-4">Объект не найден</h1>
+          <h1 className="text-2xl font-bold text-white mb-4">Property not found</h1>
           <a href="/" className="btn-primary inline-block">
-            Вернуться на главную
+            Back to Home
           </a>
         </div>
       </div>

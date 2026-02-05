@@ -8,16 +8,16 @@ interface PropertyCardProps {
 }
 
 const typeLabels: Record<string, string> = {
-  apartment: 'Квартира',
-  house: 'Дом',
-  land: 'Участок',
-  commercial: 'Коммерческая'
+  apartment: 'Apartment',
+  house: 'House',
+  land: 'Land',
+  commercial: 'Commercial'
 };
 
 const statusLabels: Record<string, { label: string; color: string }> = {
-  active: { label: 'Активно', color: 'bg-green-500' },
-  sold: { label: 'Продано', color: 'bg-red-500' },
-  reserved: { label: 'Резерв', color: 'bg-yellow-500' }
+  active: { label: 'For Sale', color: 'bg-green-500' },
+  sold: { label: 'Sold', color: 'bg-red-500' },
+  reserved: { label: 'Reserved', color: 'bg-yellow-500' }
 };
 
 export default function PropertyCard({ property }: PropertyCardProps) {

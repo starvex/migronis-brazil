@@ -16,13 +16,13 @@ export default function Header({ siteName = 'Migronis Brazil' }: HeaderProps) {
         
         <nav className="hidden md:flex items-center gap-6">
           <Link href="/" className="text-neutral-400 hover:text-white transition-colors">
-            Главная
+            Home
           </Link>
           <Link href="/#properties" className="text-neutral-400 hover:text-white transition-colors">
-            Объекты
+            Properties
           </Link>
           <Link href="/#contact" className="text-neutral-400 hover:text-white transition-colors">
-            Контакты
+            Contact
           </Link>
         </nav>
       </div>

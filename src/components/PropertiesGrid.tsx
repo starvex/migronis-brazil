@@ -5,11 +5,11 @@ import PropertyCard from './PropertyCard';
 import { Property, getProperties } from '@/lib/api';
 
 const filters = [
-  { key: '', label: 'Все' },
-  { key: 'apartment', label: 'Квартиры' },
-  { key: 'house', label: 'Дома' },
-  { key: 'land', label: 'Участки' },
-  { key: 'commercial', label: 'Коммерческая' }
+  { key: '', label: 'All' },
+  { key: 'apartment', label: 'Apartments' },
+  { key: 'house', label: 'Houses' },
+  { key: 'land', label: 'Land' },
+  { key: 'commercial', label: 'Commercial' }
 ];
 
 interface PropertiesGridProps {
@@ -68,7 +68,7 @@ export default function PropertiesGrid({ initialProperties }: PropertiesGridProp
         </div>
       ) : (
         <div className="text-center py-12 text-neutral-500">
-          <p>Объектов пока нет</p>
+          <p>No properties available</p>
         </div>
       )}
     </div>

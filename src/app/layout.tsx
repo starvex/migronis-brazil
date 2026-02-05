@@ -16,8 +16,8 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Migronis Brazil | Недвижимость в Santa Catarina",
-  description: "Премиальная недвижимость в Бразилии. Дома, квартиры и участки в Santa Catarina.",
+  title: "Migronis Brazil | Real Estate in Santa Catarina",
+  description: "Premium real estate in Brazil. Houses, apartments and land in Santa Catarina.",
 };
 
 export default async function RootLayout({
@@ -33,7 +33,7 @@ export default async function RootLayout({
   }
 
   return (
-    <html lang="ru" className={`${inter.variable} ${jetbrainsMono.variable}`}>
+    <html lang="en" className={`${inter.variable} ${jetbrainsMono.variable}`}>
       <head>
         {/* GTM */}
         {settings?.gtm_id && (

@@ -19,14 +19,14 @@ export default function Footer({ settings }: FooterProps) {
               {settings?.site_name || 'Migronis Brazil'}
             </h3>
             <p className="text-neutral-400 text-sm">
-              Премиальная недвижимость в Santa Catarina, Бразилия.
-              Инвестиции и жизнь у океана.
+              Premium real estate in Santa Catarina, Brazil.
+              Investments and oceanfront living.
             </p>
           </div>
           
           {/* Contact */}
           <div>
-            <h4 className="font-semibold text-white mb-4">Контакты</h4>
+            <h4 className="font-semibold text-white mb-4">Contact</h4>
             <div className="space-y-2 text-sm">
               {settings?.contact_email && (
                 <a 
@@ -55,7 +55,7 @@ export default function Footer({ settings }: FooterProps) {
           
           {/* Location */}
           <div>
-            <h4 className="font-semibold text-white mb-4">Локация</h4>
+            <h4 className="font-semibold text-white mb-4">Location</h4>
             <p className="text-neutral-400 text-sm">
               Santa Catarina, Brasil<br />
               Florianópolis • Balneário Camboriú<br />
@@ -65,7 +65,7 @@ export default function Footer({ settings }: FooterProps) {
         </div>
         
         <div className="border-t border-neutral-800 mt-8 pt-8 text-center text-neutral-500 text-sm">
-          © {year} {settings?.site_name || 'Migronis Brazil'}. Все права защищены.
+          © {year} {settings?.site_name || 'Migronis Brazil'}. All rights reserved.
         </div>
       </div>
     </footer>
